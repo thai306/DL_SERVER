@@ -339,8 +339,8 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Downloading DirectAdmin distribution package ${FILE}..."
-curl --progress-bar --location --connect-timeout 60 -o "${TMP_DIR}/${FILE}" "https://github.com/thai306/DL_SERVER/blob/main/directadmin.tar.gz&redirect=ok" \
-	|| curl --progress-bar --location --connect-timeout 60 -o "${TMP_DIR}/${FILE}" "http://github.com/thai306/DL_SERVER/blob/main/directadmin.tar.gz&redirect=ok"
+curl --progress-bar --location --connect-timeout 60 -o "${TMP_DIR}/${FILE}" "https://github.com/thai306/DL_SERVER/raw/main/directadmin.tar.gz&redirect=ok" \
+	|| curl --progress-bar --location --connect-timeout 60 -o "${TMP_DIR}/${FILE}" "http://github.com/thai306/DL_SERVER/raw/main/directadmin.tar.gz&redirect=ok"
 
 if [ ! -e "${TMP_DIR}/${FILE}" ]; then
 	echo "Unable to download";
