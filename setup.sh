@@ -356,7 +356,7 @@ fi
 
 echo "Extracting DirectAdmin package ${FILE} to /usr/local/directadmin ..."
 mkdir -p "${DA_PATH}"
-tar xzf "${TMP_DIR}/${FILE}" -C "${DA_PATH}"
+tar -xzf "${TMP_DIR}/${FILE}" -C "${DA_PATH}"
 
 if [ ! -e $DA_PATH/directadmin ]; then
 	echo "Cannot find the DirectAdmin binary.  Extraction failed";
